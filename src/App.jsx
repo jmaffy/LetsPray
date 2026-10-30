@@ -368,7 +368,7 @@ function Confetti() {
     delay: Math.random() * 2.5,
     duration: 2.8 + Math.random() * 2,
     size: 7 + Math.random() * 8,
-    color: ["#6b9e78","#8eba95","#5b8fa8","#7a8082","#4a7a60","#8eba95","#5b8fa8"][i % 7],
+    color: ["#F5B359","#F8CE8E","#5b8fa8","#7a8082","#C98A35","#F8CE8E","#5b8fa8"][i % 7],
     rotate: Math.random() * 360,
   }));
   return (
@@ -451,13 +451,13 @@ function AllPrayedScreen({ prayedCount, praySessionCount, total, onWeek, onKeepP
       {show && <Confetti />}
       <div style={{ animation:"celebPulse 2s ease-in-out infinite", lineHeight:1 }}>
         <svg width="64" height="64" viewBox="0 0 20 20">
-          <path d="M10,2 L11.768,8.232 L18,10 L11.768,11.768 L10,18 L8.232,11.768 L2,10 L8.232,8.232 Z" fill="#6b9e78" />
+          <path d="M10,2 L11.768,8.232 L18,10 L11.768,11.768 L10,18 L8.232,11.768 L2,10 L8.232,8.232 Z" fill="#F5B359" />
         </svg>
       </div>
       <h2 style={{ fontFamily:"'Lora', Georgia, serif", fontSize:34, fontWeight:400, color:"#e8e0d4", margin:0, lineHeight:1.2 }}>
         Everyone's been<br/>prayed for!
       </h2>
-      <p style={{ fontSize:14, color:"#6b9e78", margin:0, fontWeight:500 }}>
+      <p style={{ fontSize:14, color:"#F5B359", margin:0, fontWeight:500 }}>
         {praySessionCount > prayedCount ? praySessionCount : prayedCount} of {total} this week
       </p>
       {isMonday ? (
@@ -470,7 +470,7 @@ function AllPrayedScreen({ prayedCount, praySessionCount, total, onWeek, onKeepP
           <CountdownTicker targetTs={nextMonday} />
         </div>
       )}
-      <button onClick={() => onKeepPraying()} style={{ background:C.accent, border:"none", color:C.bg, borderRadius:12, padding:"13px 28px", fontSize:14, fontWeight:600, cursor:"pointer", fontFamily:"'Inter', system-ui, sans-serif", boxShadow:"0 4px 20px rgba(107,158,120,0.3)" }}>
+      <button onClick={() => onKeepPraying()} style={{ background:C.accent, border:"none", color:C.bg, borderRadius:12, padding:"13px 28px", fontSize:14, fontWeight:600, cursor:"pointer", fontFamily:"'Inter', system-ui, sans-serif", boxShadow:"0 4px 20px rgba(245,179,89,0.3)" }}>
         Keep Praying
       </button>
       <button onClick={onWeek} style={{ background:"none", border:"1px solid #333839", color:"#7a8082", borderRadius:10, padding:"10px 20px", fontSize:13, cursor:"pointer", fontFamily:"'Inter', system-ui, sans-serif" }}>
@@ -505,7 +505,7 @@ function SetupScreen({ onComplete }) {
   return (
     <div style={{ minHeight:"100vh", background:"#1a1c1e", display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center", padding:"32px 24px" }}>
       <svg width="48" height="48" viewBox="0 0 20 20" style={{ marginBottom:16 }}>
-        <path d="M10,2 L11.768,8.232 L18,10 L11.768,11.768 L10,18 L8.232,11.768 L2,10 L8.232,8.232 Z" fill="#6b9e78" />
+        <path d="M10,2 L11.768,8.232 L18,10 L11.768,11.768 L10,18 L8.232,11.768 L2,10 L8.232,8.232 Z" fill="#F5B359" />
       </svg>
       <h1 style={{ fontFamily:"'Lora', Georgia, serif", fontSize:28, fontWeight:600, color:"#e8e0d4", margin:"0 0 6px", textAlign:"center" }}>Let’s Pray</h1>
       <p style={{ fontSize:13, color:"#7a8082", margin:"0 0 32px", textAlign:"center" }}>Admin setup — only needs to be done once</p>
@@ -515,7 +515,7 @@ function SetupScreen({ onComplete }) {
         <div><label style={lbl}>Admin Password</label><input type="password" value={pw} onChange={e => setPw(e.target.value)} placeholder="Choose a password (6+ characters)" style={inp} /></div>
         <div><label style={lbl}>Confirm Password</label><input type="password" value={pw2} onChange={e => setPw2(e.target.value)} onKeyDown={e => e.key === "Enter" && submit()} placeholder="Re-enter password" style={inp} /></div>
         {err && <p style={{ color:"#c07070", fontSize:13, margin:0 }}>{err}</p>}
-        <button onClick={submit} disabled={saving} style={{ background:"#6b9e78", border:"none", color:"#fff", borderRadius:12, padding:"14px 0", fontSize:15, fontWeight:600, cursor:"pointer", fontFamily:"'Inter', system-ui, sans-serif", marginTop:4, opacity: saving ? 0.7 : 1 }}>{saving ? "Saving…" : "Get Started"}</button>
+        <button onClick={submit} disabled={saving} style={{ background:"#F5B359", border:"none", color:"#fff", borderRadius:12, padding:"14px 0", fontSize:15, fontWeight:600, cursor:"pointer", fontFamily:"'Inter', system-ui, sans-serif", marginTop:4, opacity: saving ? 0.7 : 1 }}>{saving ? "Saving…" : "Get Started"}</button>
       </div>
     </div>
   );
@@ -525,7 +525,7 @@ function LoadingScreen() {
   return (
     <div style={{ minHeight:"100vh", background:"#1a1c1e", display:"flex", alignItems:"center", justifyContent:"center" }}>
       <svg width="36" height="36" viewBox="0 0 20 20" style={{ opacity:0.5 }}>
-        <path d="M10,2 L11.768,8.232 L18,10 L11.768,11.768 L10,18 L8.232,11.768 L2,10 L8.232,8.232 Z" fill="#6b9e78" />
+        <path d="M10,2 L11.768,8.232 L18,10 L11.768,11.768 L10,18 L8.232,11.768 L2,10 L8.232,8.232 Z" fill="#F5B359" />
       </svg>
     </div>
   );
@@ -631,7 +631,7 @@ function AppMain({ settings }) {
   @keyframes flyInLeft   { from { transform: translateX(110%)  rotate(6deg);  opacity: 0; } to { transform: none; opacity: 1; } }
   @keyframes flyInRight  { from { transform: translateX(-110%) rotate(-6deg); opacity: 0; } to { transform: none; opacity: 1; } }
   @keyframes confettiFall { 0% { transform: translateY(-20px) rotate(0deg); opacity: 1; } 100% { transform: translateY(100vh) rotate(720deg); opacity: 0; } }
-  @keyframes celebPulse { 0%,100%{transform:scale(1) filter:drop-shadow(0 0 0px #6b9e78)} 50%{transform:scale(1.1) filter:drop-shadow(0 0 12px #6b9e78)} }
+  @keyframes celebPulse { 0%,100%{transform:scale(1) filter:drop-shadow(0 0 0px #F5B359)} 50%{transform:scale(1.1) filter:drop-shadow(0 0 12px #F5B359)} }
   @keyframes bdayGlow { 0%,100%{box-shadow:0 0 8px 2px rgba(255,255,255,0.2), 0 0 0 0 rgba(255,255,255,0)} 50%{box-shadow:0 0 18px 6px rgba(255,255,255,0.35), 0 0 32px 12px rgba(255,255,255,0.1)} }
   @keyframes bdaySpin { 0%{transform:rotate(-8deg) scale(1.08)} 50%{transform:rotate(8deg) scale(1.15)} 100%{transform:rotate(-8deg) scale(1.08)} }
 `;
@@ -1127,7 +1127,7 @@ function AppMain({ settings }) {
       {/* Header */}
       <header style={S.header}>
         <div style={S.logoWrap}>
-          <svg width="16" height="16" viewBox="0 0 20 20" style={{ flexShrink:0, marginTop:2 }}><path d="M10,2 L11.768,8.232 L18,10 L11.768,11.768 L10,18 L8.232,11.768 L2,10 L8.232,8.232 Z" fill="#6b9e78" /></svg>
+          <svg width="16" height="16" viewBox="0 0 20 20" style={{ flexShrink:0, marginTop:2 }}><path d="M10,2 L11.768,8.232 L18,10 L11.768,11.768 L10,18 L8.232,11.768 L2,10 L8.232,8.232 Z" fill="#F5B359" /></svg>
           <div style={{ display:"flex", flexDirection:"column", lineHeight:1 }}>
             <span style={S.logoText}>{MINISTRY_NAME}</span>
             {MINISTRY_SUB && <span style={S.logoSub}>{MINISTRY_SUB}</span>}
@@ -1239,7 +1239,7 @@ function AppMain({ settings }) {
                   <div style={{ ...S.cardGhost, transform: "rotate(2deg) translateY(6px)", opacity: 0.35 }} />
                   <div style={{ ...S.cardGhost, transform: "rotate(-1.5deg) translateY(3px)", opacity: 0.55 }} />
                   <div style={{ ...S.card, ...S.tapCard }}>
-                    <svg width="52" height="52" viewBox="0 0 20 20" style={{ marginBottom: 12, flexShrink:0 }}><path d="M10,2 L11.768,8.232 L18,10 L11.768,11.768 L10,18 L8.232,11.768 L2,10 L8.232,8.232 Z" fill="#6b9e78" /></svg>
+                    <svg width="52" height="52" viewBox="0 0 20 20" style={{ marginBottom: 12, flexShrink:0 }}><path d="M10,2 L11.768,8.232 L18,10 L11.768,11.768 L10,18 L8.232,11.768 L2,10 L8.232,8.232 Z" fill="#F5B359" /></svg>
                     <h2 style={S.tapTitle}>Tap to Begin</h2>
                     <p style={S.tapSub}>{deck.length} {filter === "all" ? "people" : filter.replace("-", " ")} ready</p>
                   </div>
@@ -1428,7 +1428,7 @@ function AppMain({ settings }) {
           )}
 {streak > 0 && (
             <div style={{ display:"flex", alignItems:"center", gap:10, padding:"12px 16px", background:C.accentBg, border:`1px solid ${C.accent}44`, borderRadius:12 }}>
-              <svg width="18" height="18" viewBox="0 0 20 20" style={{ flexShrink:0 }}><path d="M10,2 L11.768,8.232 L18,10 L11.768,11.768 L10,18 L8.232,11.768 L2,10 L8.232,8.232 Z" fill="#6b9e78" /></svg>
+              <svg width="18" height="18" viewBox="0 0 20 20" style={{ flexShrink:0 }}><path d="M10,2 L11.768,8.232 L18,10 L11.768,11.768 L10,18 L8.232,11.768 L2,10 L8.232,8.232 Z" fill="#F5B359" /></svg>
               <div style={{ display:"flex", flexDirection:"column", gap:2 }}>
                 <span style={{ fontSize:10, color:C.accent, fontWeight:600, textTransform:"uppercase", letterSpacing:"0.08em", fontFamily:"'Inter', system-ui, sans-serif" }}>Prayer Streak</span>
                 <span style={{ fontSize:14, color:C.cream, fontFamily:"'Lora', Georgia, serif", lineHeight:1.3 }}>
@@ -1592,7 +1592,7 @@ function AppMain({ settings }) {
                   <div style={S.personActions}>
                     <button onClick={() => { setEditBdayFor(editBdayFor === p.id ? null : p.id); setBdayInput(p.birthday || ""); setEditNameFor(null); }}
                       style={{ ...S.iconBtn, color: p.birthday ? C.accent : C.muted }} title="Set birthday"><Cake size={13} /></button>
-                    <button onClick={() => cycleGroup(p.id)} style={{ ...S.iconBtn, color: p.group === "hs" ? "#7aafc4" : p.group === "ms" ? "#8eba95" : C.muted }} title="Cycle HS/MS/none">
+                    <button onClick={() => cycleGroup(p.id)} style={{ ...S.iconBtn, color: p.group === "hs" ? "#7aafc4" : p.group === "ms" ? "#F8CE8E" : C.muted }} title="Cycle HS/MS/none">
                       <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.02em" }}>{p.group ? p.group.toUpperCase() : "—"}</span>
                     </button>
                     <button onClick={() => toggleType(p.id)} style={S.iconBtn} title="Toggle role"><RefreshCw size={13} /></button>
@@ -1882,18 +1882,18 @@ const C = {
   surface: "#222527",   // slightly lighter charcoal
   card: "#272b2e",      // card surface
   border: "#333839",    // subtle border
-  accent: "#6b9e78",    // sage green
-  accentLight: "#8eba95", // lighter sage
-  accentBg: "#1e2820",  // sage tinted bg
+  accent: "#F5B359",    // sage green
+  accentLight: "#F8CE8E", // lighter sage
+  accentBg: "#2a2218",  // sage tinted bg
   cream: "#e8e0d4",     // warm white
   muted: "#7a8082",     // cool grey
   faint: "#2e3235",     // very dark grey
   student: "#5b8fa8",   // steel blue
   studentBg: "#1a262e", // dark blue
-  leader: "#6b9e78",    // sage (same as accent)
-  leaderBg: "#1e2820",
-  prayedGreen: "#6b9e78",
-  prayedBg: "#1e2820",
+  leader: "#F5B359",    // sage (same as accent)
+  leaderBg: "#2a2218",
+  prayedGreen: "#F5B359",
+  prayedBg: "#2a2218",
 };
 
 /* ── Styles ─────────────────────────────────────────────── */
@@ -1928,7 +1928,7 @@ const S = {
   cardOuter: { position: "relative", margin: "0 0 20px", touchAction: "pan-y" },
   cardGhost: { position: "absolute", inset: 0, background: "#242729", borderRadius: 16, boxShadow: "0 4px 16px rgba(0,0,0,0.4)" },
   card: { position: "relative", backgroundColor: C.card, background: `repeating-linear-gradient(${C.card}, ${C.card} 27px, #2e3235 27px, #2e3235 28px)`, backgroundPositionY: "52px", border: "1px solid rgba(255,255,255,0.06)", borderTop: `1px solid ${C.accent}33`, borderRadius: 16, padding: "28px 24px 22px", display: "flex", flexDirection: "column", gap: 0, boxShadow: `0 2px 0 ${C.accent}18 inset, 0 12px 48px rgba(0,0,0,0.6), 0 2px 8px rgba(0,0,0,0.4)`, userSelect: "none", willChange: "transform" },
-  cardDone: { background: "#1d2620", border: "1px solid rgba(107,158,120,0.2)", borderTop: "1px solid rgba(107,158,120,0.35)" },
+  cardDone: { background: "#2a2218", border: "1px solid rgba(245,179,89,0.2)", borderTop: "1px solid rgba(245,179,89,0.35)" },
   badge: { display: "inline-flex", alignSelf: "flex-start", padding: "3px 11px", borderRadius: 12, fontSize: 11, fontWeight: 500, letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 14 },
   studentBadge: { background: C.studentBg, color: C.student, border: `1px solid ${C.student}33` },
   leaderBadge: { background: C.leaderBg, color: C.leader, border: `1px solid ${C.leader}33` },
@@ -1948,13 +1948,13 @@ const S = {
   reqRemove: { background: "none", border: "none", color: C.muted, cursor: "pointer", padding: 2, display: "flex", flexShrink: 0 },
   reqInputRow: { display: "flex", gap: 6, alignItems: "center", marginTop: 4 },
   reqInput: { flex: 1, background: C.faint, border: `1px solid ${C.border}`, borderRadius: 8, color: C.cream, padding: "7px 10px", fontSize: 13, fontFamily: "'Inter', system-ui, sans-serif", outline: "none" },
-  reqAddBtn: { background: C.accent, border: "none", color: "#fff", borderRadius: 8, padding: "7px 12px", fontSize: 12, fontWeight: 600, cursor: "pointer", fontFamily: "'Inter', system-ui, sans-serif" },
+  reqAddBtn: { background: C.accent, border: "none", color: C.bg, borderRadius: 8, padding: "7px 12px", fontSize: 12, fontWeight: 600, cursor: "pointer", fontFamily: "'Inter', system-ui, sans-serif" },
   reqCancelBtn: { background: "none", border: `1px solid ${C.border}`, color: C.muted, borderRadius: 8, width: 32, height: 32, display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer" },
   addReqTrigger: { background: "none", border: `1px solid ${C.border}`, color: C.muted, borderRadius: 8, padding: "6px 12px", fontSize: 12, cursor: "pointer", display: "flex", alignItems: "center", alignSelf: "flex-start", marginTop: 8, fontFamily: "'Inter', system-ui, sans-serif" },
   navRow: { display: "flex", alignItems: "center", justifyContent: "center", gap: 20, marginBottom: 16 },
   navArrow: { background: C.surface, border: `1px solid ${C.border}`, color: C.muted, borderRadius: "50%", width: 44, height: 44, display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer" },
   counter: { fontFamily: "'Lora', Georgia, serif", fontSize: 18, color: C.muted, minWidth: 60, textAlign: "center" },
-  prayBtn: { background: C.accent, border: "none", color: "#fff", borderRadius: 12, padding: "14px 0", fontSize: 15, fontWeight: 600, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "'Inter', system-ui, sans-serif", boxShadow: `0 4px 24px rgba(107,158,120,0.4)`, letterSpacing: "0.02em" },
+  prayBtn: { background: C.accent, border: "none", color: #C.bg, borderRadius: 12, padding: "14px 0", fontSize: 15, fontWeight: 600, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "'Inter', system-ui, sans-serif", boxShadow: `0 4px 24px rgba(245,179,89,0.4)`, letterSpacing: "0.02em" },
   prayedActions: { display: "flex", alignItems: "center", justifyContent: "center", gap: 12 },
   prayedConfirm: { display: "flex", alignItems: "center", color: C.prayedGreen, fontSize: 15, fontWeight: 500 },
   undoBtn: { background: "none", border: `1px solid ${C.border}`, color: C.muted, borderRadius: 8, padding: "6px 14px", fontSize: 12, cursor: "pointer", fontFamily: "'Inter', system-ui, sans-serif" },
@@ -1975,7 +1975,7 @@ const S = {
   addRow: { display: "flex", gap: 8 },
   addInput: { flex: 1, background: C.surface, border: `1px solid ${C.border}`, borderRadius: 10, color: C.cream, padding: "10px 12px", fontSize: 13, fontFamily: "'Inter', system-ui, sans-serif", outline: "none" },
   addTypeSelect: { background: C.surface, border: `1px solid ${C.border}`, color: C.muted, borderRadius: 10, padding: "10px 10px", fontSize: 12, fontFamily: "'Inter', system-ui, sans-serif", cursor: "pointer", outline: "none" },
-  addPersonBtn: { background: C.accent, border: "none", color: "#fff", borderRadius: 10, width: 42, height: 42, display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer", flexShrink: 0 },
+  addPersonBtn: { background: C.accent, border: "none", color: C.bg, borderRadius: 10, width: 42, height: 42, display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer", flexShrink: 0 },
   statRow: { display: "flex", gap: 6 },
   statChip: { flex: 1, background: C.surface, border: `1px solid ${C.border}`, borderRadius: 10, padding: "8px 0", display: "flex", flexDirection: "column", alignItems: "center", gap: 2 },
   statNum: { fontSize: 18, fontFamily: "'Lora', Georgia, serif", color: C.cream },
@@ -2033,7 +2033,7 @@ const S = {
   previewName: { fontSize: 13, color: C.cream },
   moreText: { fontSize: 12, color: C.muted, margin: "6px 0 0", textAlign: "center" },
   previewBtnRow: { display: "flex", gap: 8, marginTop: 12 },
-  confirmBtn: { background: C.accent, border: "none", color: "#fff", borderRadius: 8, padding: "9px 20px", fontSize: 13, fontWeight: 600, cursor: "pointer", fontFamily: "'Inter', system-ui, sans-serif" },
+  confirmBtn: { background: C.accent, border: "none", color: C.bg, borderRadius: 8, padding: "9px 20px", fontSize: 13, fontWeight: 600, cursor: "pointer", fontFamily: "'Inter', system-ui, sans-serif" },
   cancelBtn: { background: "none", border: `1px solid ${C.border}`, color: C.muted, borderRadius: 8, padding: "9px 16px", fontSize: 13, cursor: "pointer", fontFamily: "'Inter', system-ui, sans-serif" },
   // WEEKLY REPORT
   reportBox: { background: C.surface, border: `1px solid ${C.border}`, borderRadius: 14, padding: "16px" },
@@ -2076,7 +2076,7 @@ const S = {
   // GROUP BADGES
   badgeRow: { display: "flex", gap: 6, marginBottom: 14 },
   hsBadge: { background: C.studentBg, color: "#7aafc4", border: "1px solid #7aafc433", marginBottom: 0 },
-  msBadge: { background: C.faint, color: "#8eba95", border: "1px solid #6b9e7833", marginBottom: 0 },
+  msBadge: { background: C.faint, color: "#F8CE8E", border: "1px solid #F5B35933", marginBottom: 0 },
   hsBadgeSm: { background: C.studentBg, color: "#7aafc4" },
-  msBadgeSm: { background: C.faint, color: "#8eba95" },
+  msBadgeSm: { background: C.faint, color: "#F8CE8E" },
 };
