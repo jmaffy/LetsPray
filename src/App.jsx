@@ -1954,7 +1954,7 @@ const S = {
   navRow: { display: "flex", alignItems: "center", justifyContent: "center", gap: 20, marginBottom: 16 },
   navArrow: { background: C.surface, border: `1px solid ${C.border}`, color: C.muted, borderRadius: "50%", width: 44, height: 44, display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer" },
   counter: { fontFamily: "'Lora', Georgia, serif", fontSize: 18, color: C.muted, minWidth: 60, textAlign: "center" },
-  prayBtn: { background: C.accent, border: "none", color: #C.bg, borderRadius: 12, padding: "14px 0", fontSize: 15, fontWeight: 600, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "'Inter', system-ui, sans-serif", boxShadow: `0 4px 24px rgba(245,179,89,0.4)`, letterSpacing: "0.02em" },
+  prayBtn: { background: C.accent, border: "none", color: C.bg, borderRadius: 12, padding: "14px 0", fontSize: 15, fontWeight: 600, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "'Inter', system-ui, sans-serif", boxShadow: `0 4px 24px rgba(245,179,89,0.4)`, letterSpacing: "0.02em" },
   prayedActions: { display: "flex", alignItems: "center", justifyContent: "center", gap: 12 },
   prayedConfirm: { display: "flex", alignItems: "center", color: C.prayedGreen, fontSize: 15, fontWeight: 500 },
   undoBtn: { background: "none", border: `1px solid ${C.border}`, color: C.muted, borderRadius: 8, padding: "6px 14px", fontSize: 12, cursor: "pointer", fontFamily: "'Inter', system-ui, sans-serif" },
